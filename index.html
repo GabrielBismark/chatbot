@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chat Typebot</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+    </style>
+    <script>
+      (function () {
+        const script = document.createElement("script");
+        script.src = "https://midias-s3-global.sendbot.cloud/sendbot/embeds/scripts/web.js";
+        script.onload = () => {
+          Typebot.initBubble({
+            typebot: "agente-autoconhecimento-vgu2q2w",
+            apiHost: "https://sendbot.chat",
+            wsHost: "partykit.sendbot.co",
+            previewMessage: "Olá! Posso te ajudar no autoconhecimento?",
+            theme: {
+              button: { backgroundColor: "#5c6ac4", iconColor: "#ffffff" },
+            },
+          });
+        };
+        document.head.appendChild(script);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
